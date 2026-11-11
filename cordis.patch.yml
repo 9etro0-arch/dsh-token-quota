@@ -1,0 +1,14 @@
+# dsh-token-quota bundle patch
+#
+# When this package is installed with the DSH plugin manager, the CLI appends
+# this bundle to the profile stack and this patch inserts the plugin row. The
+# row's module name is the package name, resolved through the profile's
+# node_modules.
+#
+# `config` is intentionally absent: the shipped defaults are quota 0 (guard
+# off until a budget is set) and warnPercent 80. A user who wants other
+# defaults edits them in Settings → Plugins (which writes the profile patch)
+# or adds an override here.
+- insert:
+    - id: dsh-token-quota
+      name: 'dsh-token-quota'

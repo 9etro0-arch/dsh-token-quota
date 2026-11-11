@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Token Quota Guard",
+    "description": "Set a token budget per session: when context usage approaches the quota, a warning pauses the running task until you choose to continue, raise the quota, or stop."
+  }
+}
